@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css./style.css">
 </head>
 <body>
-    <ul id="menu">
+    <ul id="menu" >
         <li> 
             <a href= "index.html"> Home </a>
             
@@ -19,28 +19,31 @@
     <h1>Entre em contato</h1>
     <form>
     <label for="nome">Nome:</label> 
-    <input type="text" id="nome">
-    <br>
+    <input type="text" id="nome" onkeyup='validaNome()'>
+    <div id='txtNome'></div>
     <br>
     <label for="e-mail">E-mail:</label> 
-    <input type="e-mail" id="e-mail">
-    <br>
+    <input type="e-mail" id="e-mail" onkeyup='validaEmail()'>
+    <div id='txtEmail'></div>
     <br>
     <label for="assunto">Assunto:</label>
-    <textarea name="assunto" id="assunto" cols="30" rows="5"></textarea>
+    <textarea name="assunto" id="assunto" cols="30" rows="5" onkeyup='validaAssunto()'></textarea>
+    <div id='txtAssunto==='></div>
     <br>
-    <br>
-    <button>Enviar</button>
+    <button onclick="enviar">Enviar</button>
     </form>
 
     <h2 class="center">Endereço:</h2>
     <footer class="center">
     <div class="container">
         <p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.511197260389!2d-46.65709648502183!3d-23.58599278467073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59f3c5b5d37d%3A0x5e6598c9b3e7f9a8!2sAv.%20Pedro%20%C3%81lvares%20Cabral%20-%20Moema%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1610397583152!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;"
-             allowfullscreen="" 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.511197260389!2d-46.65709648502183!3d-23.58599278467073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59f3c5b5d37d%3A0x5e6598c9b3e7f9a8!2sAv.%20Pedro%20%C3%81lvares%20Cabral%20-%20Moema%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1610397583152!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" 
+            allowfullscreen="" 
              aria-hidden="false" 
-             tabindex="0">
+             tabindex="0"
+             id='mapa'
+             onmousemove="mapaZoom()"
+             onmouseout="mapaNormal()">
             </iframe>
             </p>
     </div>
@@ -60,5 +63,6 @@
     </div>
     <p>Todos os direitos reservados: Dayane Oliveira &copy;</p>  
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
