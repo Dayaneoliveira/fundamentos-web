@@ -25,8 +25,8 @@ let mapa = document.querySelector("#mapa")
     Seleciona IMPUT o elemento que o nome, não o que tem dentrO
 */
 
-nome.style.width= '100%'
-email.style.width= '150%'
+nome.style.width= '35%'
+email.style.width ='200%'
 
 /* Ele vai fazer a validação do que vc deseja, value é vALOR e o length tamanho de algo */
 function validaNome()
@@ -84,7 +84,7 @@ function enviar()
 }
 function mapaZoom()
 {
-    mapa.style.width='1200px'
+    mapa.style.width='1000px'
     mapa.style.height='900px'
 }
 function mapaNormal()
